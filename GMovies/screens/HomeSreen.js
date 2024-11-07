@@ -1,13 +1,18 @@
 import { View, Text, Platform, TouchableOpacity, ScrollView } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import { StatusBar } from 'expo-status-bar'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { Bars3BottomLeftIcon, MagnifyingGlassIcon } from 'react-native-heroicons/outline'
 import { styles } from '../theme'
+import TredingMovies from '../componets/tredingMovies'
+import MovieList from '../componets/movieList'
 
  const ios = Platform.OS == 'ios';
 
 export default function HomeSreen() {
+  const [trending, setTrending] = useState([1,2,3])
+  const [upcoming, setUpcoming] = useState([1,2,3,4])
+  const [topRated, setTopRated] = useState([1,2,3,4,5])
   return (
     <View className="flex-1 bg-neutral-800">
       <SafeAreaView className={ios ? '-mb-2' : 'mb-3'}>
@@ -31,6 +36,8 @@ export default function HomeSreen() {
       showHorizontalScrollIndicator={false}
       contentContainerStyles={{ paddingBottom: 10 }}
       >
+        <TredingMovies data={trending} />
+        <MovieList title="Próximos Lançamentos" data={upcoming} />
         
       </ScrollView>
     </View>
