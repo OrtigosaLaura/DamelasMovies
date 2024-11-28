@@ -5,10 +5,10 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { Bars3BottomLeftIcon, MagnifyingGlassIcon } from 'react-native-heroicons/outline';
 import { styles } from '../theme';
 import { useNavigation } from '@react-navigation/native'
-import TrendingMovies from '../components/trendingMovies';
 import MovieList from '../components/movieList';
 import Loading from '../components/loading';
 import { fetchTopRatedMovies, fetchTrendingMovies, fetchUpcomingMovies } from '../api/moviedb';
+import TrendingMovies from '../components/tredingMovies';
 
 const ios = Platform.OS == "ios";
 

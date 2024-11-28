@@ -1,4 +1,4 @@
-export const apiKey = 'Colocar sua chave API do site themoviedb.org';
+export const apiKey = 'e896e55c79460e56fae6174743360092';
 
 export const moviesData = [
   {
